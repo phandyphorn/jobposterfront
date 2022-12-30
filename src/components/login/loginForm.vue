@@ -220,7 +220,7 @@ export default {
                 this.isClickSigIn = true
                 this.isEmptyEmail = false
                 this.isEmptyPassword = false
-                axios.post('https://54.169.143.212/api/login/',
+                axios.post('http://54.169.143.212/api/login/',
                     { email: this.email, password: this.password }).then((res) => {
                         if (res.data.sms == 'Invalid password') {
                             this.showInvalid = true
@@ -229,7 +229,7 @@ export default {
                             localStorage.setItem('userId', res.data.id)
                             localStorage.setItem('role', res.data.role)
                             localStorage.setItem('subscription', res.data.subscription)
-                            axios.post("https://54.169.143.212/api/trail", { subscriber_id: res.data.id, plan_id: 1 }).then(() => {
+                            axios.post("http://54.169.143.212/api/trail", { subscriber_id: res.data.id, plan_id: 1 }).then(() => {
                                 this.showInvalid = false;
                                 window.location.assign('/')
                             })
