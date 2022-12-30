@@ -100,7 +100,7 @@ export default {
         sendVerifyCode() {
             this.ifClickSendCode = !this.ifClickSendCode;
             if (this.email.trim() != '') {
-                axios.post('http://52.221.224.24/api/sendCode/' + this.email).then(() => {
+                axios.post('http://54.169.143.212/api/sendCode/' + this.email).then(() => {
                     this.step1 = true;
                     this.step2 = true;
                     this.step2Form = true;
@@ -125,7 +125,7 @@ export default {
         checkVerifyCode() {
             this.ifClickSendCode = !this.ifClickSendCode;
             if (this.email.trim() != '') {
-                axios.get('http://52.221.224.24/api/userBy/' + this.email).then((res) => {
+                axios.get('http://54.169.143.212/api/userBy/' + this.email).then((res) => {
                     this.userId = res.data.id
                     this.ifClickSendCode = true
                     this.ifClickSendCode = false
@@ -146,7 +146,7 @@ export default {
 
         resetNewPsw() {
             if (this.newPsw == this.confirmPsw) {
-                axios.put('http://52.221.224.24/api/resetPsw/' + this.userId, { newPassword: this.newPsw }).then(() => {
+                axios.put('http://54.169.143.212/api/resetPsw/' + this.userId, { newPassword: this.newPsw }).then(() => {
                     Swal.fire({
                         icon: 'success',
                         text: 'Password reseted!'

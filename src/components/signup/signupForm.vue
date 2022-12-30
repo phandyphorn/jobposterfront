@@ -166,9 +166,9 @@ export default {
                     gender: this.gender,
                     password: this.passwordUser,
                 }
-                axios.post("http://52.221.224.24/api/register/", body)
+                axios.post("http://54.169.143.212/api/register/", body)
                     .then(() => {
-                        axios.post('http://52.221.224.24/api/registerEmail/' + this.emailUser)
+                        axios.post('http://54.169.143.212/api/registerEmail/' + this.emailUser)
                             .then(() => {
                                 this.fullName = "";
                                 this.emailUser = "";
@@ -205,9 +205,9 @@ export default {
                 email: this.emailGoogle,
                 password: this.passwordGoogle
             }
-            axios.post("http://52.221.224.24/api/register/", this.dataRegisterViaGoo)
+            axios.post("http://54.169.143.212/api/register/", this.dataRegisterViaGoo)
                 .then(() => {
-                    axios.post('http://52.221.224.24/api/registerEmail/' + this.emailGoogle)
+                    axios.post('http://54.169.143.212/api/registerEmail/' + this.emailGoogle)
                         .then((res) => {
                             console.log(res.data);
                             this.emailGoogle = "";

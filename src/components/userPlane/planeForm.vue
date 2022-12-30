@@ -20,8 +20,8 @@
                         <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none capitalize"
                             @click="subName(plan.name)">
                             {{
-                                    plan.name
-                            }}
+        plan.name
+}}
                         </h1>
                         <p class="flex items-center text-gray-600 mb-2" v-for="benfits of feature_benifits[index]"
                             :key="benfits">
@@ -65,7 +65,7 @@
             <input type="hidden" name="hash" id="hash" :value="hash">
             <input type="hidden" name="tran_id" id="tran_id" :value="tran_id">
             <input type="hidden" name="amount" :value="amount">
-            <input type="hidden" name="continue_success_url" value="http://52.221.224.24/successpay">
+            <input type="hidden" name="continue_success_url" value="http://54.169.143.212/successpay">
             <input type="hidden" value="true" name="is_plugin_js">
         </form>
     </div>
@@ -103,7 +103,7 @@ export default {
                 amount: this.amount,
 
             }
-            axios.post("http://52.221.224.24/api/transaction", tranInfo);
+            axios.post("http://54.169.143.212/api/transaction", tranInfo);
         },
 
         callAbaForm() {
@@ -123,7 +123,7 @@ export default {
 
         },
         userTrail() {
-            axios.post("http://52.221.224.24/api/trail", { subscriber_id: localStorage.getItem('userId'), plan_id: this.plan_id }).then(() => {
+            axios.post("http://54.169.143.212/api/trail", { subscriber_id: localStorage.getItem('userId'), plan_id: this.plan_id }).then(() => {
                 Swal.fire(
                     'Success',
                     'Your Trail was success',
@@ -133,7 +133,7 @@ export default {
         },
 
         getHasCode() {
-            axios.get("http://52.221.224.24/api/hash/" + this.amount).then((res) => {
+            axios.get("http://54.169.143.212/api/hash/" + this.amount).then((res) => {
                 this.hash = res.data;
                 this.callAbaForm();
             }).catch((err) => {
@@ -146,7 +146,7 @@ export default {
         },
 
         getTranId() {
-            axios.get("http://52.221.224.24/api/getTranID").then((res) => {
+            axios.get("http://54.169.143.212/api/getTranID").then((res) => {
                 this.tran_id = res.data
             })
         },
@@ -163,12 +163,12 @@ export default {
         },
 
         getTimestamp() {
-            axios.get("http://52.221.224.24/api/timestamp").then((res) => {
+            axios.get("http://54.169.143.212/api/timestamp").then((res) => {
                 this.req_time = res.data;
             })
         },
         getPlanBenifits() {
-            axios.get("http://52.221.224.24/api/getPlanBenifits").then((res) => {
+            axios.get("http://54.169.143.212/api/getPlanBenifits").then((res) => {
                 var benifits = res.data;
                 for (let bene of benifits) {
                     this.feature_benifits.push([bene.benifits])
@@ -179,7 +179,7 @@ export default {
 
     },
     mounted() {
-        axios.get('http://52.221.224.24/api/features').then((res) => {
+        axios.get('http://54.169.143.212/api/features').then((res) => {
             this.typePlane = res.data;
             this.getPlanBenifits()
             this.getTranId();

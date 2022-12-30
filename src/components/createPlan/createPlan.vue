@@ -84,7 +84,7 @@ export default {
                 consumable: this.consumable,
                 charges: this.charges,
             }
-            axios.post("http://52.221.224.24/api/newPlane", plan_info).then((res) => {
+            axios.post("http://54.169.143.212/api/newPlane", plan_info).then((res) => {
                 console.log(res.data);
                 if (res.data.msg == 'plan created') {
                     this.if_failed = false;

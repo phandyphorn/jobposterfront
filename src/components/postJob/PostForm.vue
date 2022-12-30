@@ -519,7 +519,7 @@ export default {
     },
 
     get_current_user_subscription() {
-      axios.get("http://52.221.224.24/api/current_scubscribe/" + localStorage.getItem("userId")).then((res) => {
+      axios.get("http://54.169.143.212/api/current_scubscribe/" + localStorage.getItem("userId")).then((res) => {
         this.isSubscription = res.data;
       })
     },

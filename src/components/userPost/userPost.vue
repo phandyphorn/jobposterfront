@@ -26,8 +26,8 @@
                 <div class="p-3  w-full">
                     <p class="text-blue-600 text-md text-ellipsis  word-break hover:cursor-pointer hover:underline-offset-auto hover:underline"
                         @click="jobDetails(job.id)">{{
-                                job.job_title
-                        }}</p>
+        job.job_title
+}}</p>
                     <p class="text-ellipsis mb-1 text-gray-500">{{ job.company_name }}</p>
                     <div class="flex lg:gap-24 gap-7">
                         <div class="w-full grid grid-cols-1 lg:grid-cols-2">
@@ -223,7 +223,7 @@ export default {
 
     methods: {
         getUserPost() {
-            axios.get("http://52.221.224.24/api/UserJob/" + this.$route.params.id).then((res) => {
+            axios.get("http://54.169.143.212/api/UserJob/" + this.$route.params.id).then((res) => {
                 if (res.data.length > 0) {
                     this.allJobs = res.data[0].jobsposter
                     this.fullName = res.data[0].fullName
@@ -292,7 +292,7 @@ export default {
                 })
                     .then((result) => {
                         if (result.isConfirmed) {
-                            axios.put("http://52.221.224.24/api/jobposter/" + this.jobIdUpdate, editedData)
+                            axios.put("http://54.169.143.212/api/jobposter/" + this.jobIdUpdate, editedData)
                                 .then((result) => {
                                     if (result.data.msg == 'updated') {
                                         Swal.fire('Saved!', '', 'success')
@@ -327,7 +327,7 @@ export default {
             })
                 .then((result) => {
                     if (result.isConfirmed) {
-                        axios.delete("http://52.221.224.24/api/jobposter/" + id)
+                        axios.delete("http://54.169.143.212/api/jobposter/" + id)
                         document.getElementById(id).remove()
                     }
                 })

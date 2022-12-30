@@ -14,7 +14,7 @@
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                             </svg>
                         </div>
-                        <input type="text" id="email-address-icon" v-model="email"
+                        <input type="text" v-model="email"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3 "
                             placeholder="Email">
                     </div>
@@ -220,7 +220,7 @@ export default {
                 this.isClickSigIn = true
                 this.isEmptyEmail = false
                 this.isEmptyPassword = false
-                axios.post('http://52.221.224.24/api/login/',
+                axios.post('http://54.169.143.212/api/login/',
                     { email: this.email, password: this.password }).then((res) => {
                         if (res.data.sms == 'Invalid password') {
                             this.showInvalid = true
@@ -229,7 +229,7 @@ export default {
                             localStorage.setItem('userId', res.data.id)
                             localStorage.setItem('role', res.data.role)
                             localStorage.setItem('subscription', res.data.subscription)
-                            axios.post("http://52.221.224.24/api/trail", { subscriber_id: res.data.id, plan_id: 1 }).then(() => {
+                            axios.post("http://54.169.143.212/api/trail", { subscriber_id: res.data.id, plan_id: 1 }).then(() => {
                                 this.showInvalid = false;
                                 window.location.assign('/')
                             })

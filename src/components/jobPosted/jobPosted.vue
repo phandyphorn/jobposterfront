@@ -119,7 +119,7 @@ export default {
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
-                    axios.put("http://52.221.224.24/api/closeJob/" + id).then(() => {
+                    axios.put("http://54.169.143.212/api/closeJob/" + id).then(() => {
                         Swal.fire('Closed!', '', 'success')
                     }).catch((err) => {
                         Swal.fire({
@@ -150,7 +150,7 @@ export default {
                 showCancelButton: true,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    axios.delete("http://52.221.224.24/api/jobposter/" + id).then(() => {
+                    axios.delete("http://54.169.143.212/api/jobposter/" + id).then(() => {
                         Swal.fire('Deleted!', '', 'success')
                     }).catch((error) => {
                         Swal.fire(error.data, '', 'error')

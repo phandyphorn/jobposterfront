@@ -83,8 +83,8 @@
                             <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                 <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
                                 <span class="relative text-xs" :id="job.id + 'active'">{{
-                                        job.active
-                                }}</span>
+        job.active
+}}</span>
                             </span>
                         </td>
                         <td
@@ -106,17 +106,17 @@
                                         <div class="grid grid-cols-2 gap-4 mt-2">
                                             <div class="relative z-0 mb-6 w-full group">
                                                 <input type="text" name="floating_email" id="floating_email" :class="{
-                                                    'border-red-500 focus:border-red-600':
-                                                        validationEditPf(fname),
-                                                    'focus:border-blue-600': !validationEditPf(fname),
-                                                }" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+    'border-red-500 focus:border-red-600':
+        validationEditPf(fname),
+    'focus:border-blue-600': !validationEditPf(fname),
+}" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
                                                     v-model="title" placeholder=" " required />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        validationEditPf(fname),
-                                                    'peer-focus:text-blue-600':
-                                                        !validationEditPf(fname),
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        validationEditPf(fname),
+    'peer-focus:text-blue-600':
+        !validationEditPf(fname),
+}"
                                                     class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Job
                                                     Title</label>
                                                 <span class="text-red-500 text-xs" v-if="validationEditPf(fname)">Job
@@ -127,10 +127,10 @@
                                                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                                     v-model="companyName" placeholder=" " />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        companyName.length < 3,
-                                                    'peer-focus:text-blue-600': companyName.length > 2,
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        companyName.length < 3,
+    'peer-focus:text-blue-600': companyName.length > 2,
+}"
                                                     class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company
                                                     Name</label>
                                                 <span class="text-red-500 text-xs" v-if="companyName.length < 3">Company
@@ -141,18 +141,18 @@
                                         <div class="grid grid-cols-2 gap-4">
                                             <div class="relative z-0 mb-6 w-full group">
                                                 <input type="text" name="floating_email" id="floating_email" :class="{
-                                                    'border-red-500 focus:border-red-600':
-                                                        validationEditPf(location),
-                                                    'focus:border-blue-600':
-                                                        !validationEditPf(location),
-                                                }" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+    'border-red-500 focus:border-red-600':
+        validationEditPf(location),
+    'focus:border-blue-600':
+        !validationEditPf(location),
+}" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
                                                     v-model="location" placeholder=" " required />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        validationEditPf(location),
-                                                    'peer-focus:text-blue-600':
-                                                        !validationEditPf(location),
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        validationEditPf(location),
+    'peer-focus:text-blue-600':
+        !validationEditPf(location),
+}"
                                                     class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Job
                                                     Location ( City or Province)
                                                 </label>
@@ -164,11 +164,11 @@
                                                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                                     v-model="address" placeholder=" " />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        validationEditPf(address),
-                                                    'peer-focus:text-blue-600':
-                                                        !validationEditPf(address),
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        validationEditPf(address),
+    'peer-focus:text-blue-600':
+        !validationEditPf(address),
+}"
                                                     class="capitalize peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Job
                                                     Job Adress (Street, Khan...)</label>
                                                 <span class="text-red-500 text-xs" v-if="validationEditPf(address)">Job
@@ -178,16 +178,16 @@
                                         <div class="grid grid-cols-1 gap-4">
                                             <div class="relative z-0 mb-6 w-full group">
                                                 <input type="text" name="floating_email" id="floating_email" :class="{
-                                                    'border-red-500 focus:border-red-600':
-                                                        validationEmail(email),
-                                                    'focus:border-blue-600': !validationEmail(email),
-                                                }" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+    'border-red-500 focus:border-red-600':
+        validationEmail(email),
+    'focus:border-blue-600': !validationEmail(email),
+}" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
                                                     v-model="email" placeholder=" " required />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        validationEmail(email),
-                                                    'peer-focus:text-blue-600': !validationEmail(email),
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        validationEmail(email),
+    'peer-focus:text-blue-600': !validationEmail(email),
+}"
                                                     class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Contact
                                                     Email</label>
                                                 <span class="text-red-500 text-xs" v-if="validationEmail(email)">Contact
@@ -197,15 +197,15 @@
                                         <div class="grid grid-cols-2 gap-4">
                                             <div class="relative z-0 mb-6 w-full group">
                                                 <input type="number" name="floating_email" id="floating_email" :class="{
-                                                    'border-red-500 focus:border-red-600': salary < 100,
-                                                    'focus:border-blue-600': salary > 100,
-                                                }" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+    'border-red-500 focus:border-red-600': salary < 100,
+    'focus:border-blue-600': salary > 100,
+}" class="capitalize block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 peer"
                                                     v-model="salary" placeholder=" " required />
                                                 <label for="floating_email" :class="{
-                                                    'text-red-500 peer-focus:text-red-500':
-                                                        salary < 100,
-                                                    'peer-focus:text-blue-600': salary > 100,
-                                                }"
+    'text-red-500 peer-focus:text-red-500':
+        salary < 100,
+    'peer-focus:text-blue-600': salary > 100,
+}"
                                                     class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Salary
                                                     ($)</label>
                                                 <span class="text-red-500 text-xs" v-if="salary < 100">Salary:(</span>
@@ -232,20 +232,20 @@
                                                             <div class="py-1">
                                                                 <MenuItem v-slot="{ active }">
                                                                 <a @click="jobType('Part-Time')" :class="[
-                                                                    active
-                                                                        ? 'bg-gray-100 text-gray-900'
-                                                                        : 'text-gray-700',
-                                                                    'block px-4 py-2 text-sm',
-                                                                ]">
+    active
+        ? 'bg-gray-100 text-gray-900'
+        : 'text-gray-700',
+    'block px-4 py-2 text-sm',
+]">
                                                                     Part-Time</a>
                                                                 </MenuItem>
                                                                 <MenuItem v-slot="{ active }">
                                                                 <a @click="jobType('Full-Time')" :class="[
-                                                                    active
-                                                                        ? 'bg-gray-100 text-gray-900'
-                                                                        : 'text-gray-700',
-                                                                    'block px-4 py-2 text-sm',
-                                                                ]">
+    active
+        ? 'bg-gray-100 text-gray-900'
+        : 'text-gray-700',
+    'block px-4 py-2 text-sm',
+]">
                                                                     Full-Time</a>
                                                                 </MenuItem>
                                                             </div>
@@ -397,7 +397,7 @@ export default {
             }).then((result) => {
                 if (result.isConfirmed) {
                     axios
-                        .delete("http://52.221.224.24/api/jobposter/" + id)
+                        .delete("http://54.169.143.212/api/jobposter/" + id)
                         .then(() => {
                             this.getUserJobs();
                             Swal.fire("Job deleted", "success");
@@ -415,7 +415,7 @@ export default {
         getUserJobs() {
             axios
                 .get(
-                    "http://52.221.224.24/api/jobposter/" +
+                    "http://54.169.143.212/api/jobposter/" +
                     localStorage.getItem("userId")
                 )
                 .then((res) => {
@@ -458,7 +458,7 @@ export default {
             }).then((result) => {
                 if (result.isConfirmed) {
                     axios
-                        .put("http://52.221.224.24/api/jobposter/" + this.jobId, {
+                        .put("http://54.169.143.212/api/jobposter/" + this.jobId, {
                             contact_email: this.email,
                             company_address: this.address,
                             salary: this.salary,

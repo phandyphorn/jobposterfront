@@ -19,8 +19,8 @@ export default {
             googleTokenLogin({ clientId: '353283530301-lgl6jhjvg6cr3foc30607b3omfqs2ste.apps.googleusercontent.com' }).then((response) => {
                 var url = 'https://www.googleapis.com/oauth2/v3/userinfo?access_token=' + response.access_token;
                 axios.get(url).then((res) => {
-                    axios.get('http://52.221.224.24/api/userBy/' + res.data.email).then((res) => {
-                        axios.post("http://52.221.224.24/api/loginViaGoogle/", { email: res.data.email }).then((res) => {
+                    axios.get('http://54.169.143.212/api/userBy/' + res.data.email).then((res) => {
+                        axios.post("http://54.169.143.212/api/loginViaGoogle/", { email: res.data.email }).then((res) => {
                             if (res.data.sms == 'Invaliid password') {
                                 Swal.fire({
                                     showCancelButton: true,
@@ -35,7 +35,7 @@ export default {
                             } else {
                                 window.location.assign('/')
                                 localStorage.setItem('userId', res.data.id)
-                                axios.get('http://52.221.224.24/api/user/' + localStorage.getItem('userId')).then((res) => {
+                                axios.get('http://54.169.143.212/api/user/' + localStorage.getItem('userId')).then((res) => {
                                     localStorage.setItem('role', res.data[0].role)
                                     console.log(res.data[0]);
                                 })

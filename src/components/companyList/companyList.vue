@@ -18,7 +18,7 @@ export default {
     },
 
     mounted() {
-        axios.get("http://52.221.224.24/api/companyName").then((res) => {
+        axios.get("http://54.169.143.212/api/companyName").then((res) => {
             this.jobList = []
             for (let value of res.data) {
                 this.jobList.push(value.company_name)

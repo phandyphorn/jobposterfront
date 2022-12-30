@@ -15,7 +15,7 @@
                 <!-- spin -->
 
                 <li v-for="job of listJobs" :key="job" @click.prevent="selectedValue(job)"><a class="capitalize ">{{ job
-                }}</a> </li>\
+                }}</a> </li>
                 <li v-if="(jobList.length == 0 && !isShowForm)"><a class="capitalize text-red-500">Not Found</a></li>
             </ul>
         </div>

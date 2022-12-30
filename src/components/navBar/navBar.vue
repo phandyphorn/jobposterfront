@@ -188,7 +188,7 @@ export default {
 
         userInfo() {
             if (this.userId > 0) {
-                axios.get("http://52.221.224.24/api/user/" + localStorage.getItem("userId")).then((res) => {
+                axios.get("http://54.169.143.212/api/user/" + localStorage.getItem("userId")).then((res) => {
                     this.role = res.data[0].role;
                     this.img = res.data[0].img;
                     this.fullName = res.data[0].fullName;

@@ -125,19 +125,19 @@ export default {
         },
 
         getUserSub() {
-            axios.get("http://52.221.224.24/api/userSubInfo/" + localStorage.getItem("userId")).then((response) => {
+            axios.get("http://54.169.143.212/api/userSubInfo/" + localStorage.getItem("userId")).then((response) => {
                 this.userSub = response.data;
             })
         },
 
         getUserInfo() {
-            axios.get("http://52.221.224.24/api/user/" + this.userId).then((response) => {
+            axios.get("http://54.169.143.212/api/user/" + this.userId).then((response) => {
                 this.userInfo = response.data[0];
             })
         },
 
         updateUserInfo(data) {
-            axios.put("http://52.221.224.24/api/user/" + this.userId, data).then(() => {
+            axios.put("http://54.169.143.212/api/user/" + this.userId, data).then(() => {
                 Swal.fire(
                     'Update Success',
                     'Your Information has been updated',
@@ -148,19 +148,19 @@ export default {
         },
 
         paymentHistory() {
-            axios.get("http://52.221.224.24/api/transaction/" + this.userId).then((res) => {
+            axios.get("http://54.169.143.212/api/transaction/" + this.userId).then((res) => {
                 this.userPayments = res.data;
             })
         },
 
         getUserJobs() {
-            axios.get("http://52.221.224.24/api/jobposter/" + this.userId).then((res) => {
+            axios.get("http://54.169.143.212/api/jobposter/" + this.userId).then((res) => {
                 this.userJobs = res.data;
             })
         },
 
         getUserCV() {
-            axios.get("http://52.221.224.24/api/cv/" + localStorage.getItem("userId")).then((res) => {
+            axios.get("http://54.169.143.212/api/cv/" + localStorage.getItem("userId")).then((res) => {
                 this.userCV = res.data;
             })
         },

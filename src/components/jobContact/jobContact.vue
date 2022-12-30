@@ -65,7 +65,7 @@ export default {
 
     methods: {
         getJobDetail() {
-            axios.get('http://52.221.224.24/api/jobposterId/' + this.$route.params.id).then((res) => {
+            axios.get('http://54.169.143.212/api/jobposterId/' + this.$route.params.id).then((res) => {
                 this.jobDetails = res.data
                 this.fname = this.jobDetails.contact_name;
                 this.phone = '';

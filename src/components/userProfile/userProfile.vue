@@ -69,7 +69,7 @@
                                     <div class="px-4 py-2">
                                         <a class="text-blue-800 hover:underline hover:underline-offset-3 tooltip"
                                             :href="'mailto:' + email" :data-tip="'Click to mail to ' + fname">{{ email
-                                            }}</a>
+}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="modal w-full" id="formEdit">
                                 <div class="modal-box lg:w-3/5 max-w-5xl w-11/12">
                                     <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2" @click="getUserData(), showBtnProgress = false,
-                                    showBtnSave = false, showBtnSaved = false">✕</label>
+    showBtnSave = false, showBtnSaved = false">✕</label>
                                     <h3 class="text-lg font-bold mb-4">Edit your profile </h3>
                                     <!-- form edit profile user -->
                                     <form @submit.prevent="hideFormEditPf" class="w-full ">
@@ -203,7 +203,7 @@ export default {
     },
     methods: {
         getUserData() {
-            axios.get('http://52.221.224.24/api/getUser/' + localStorage.getItem("userId")).then((res) => {
+            axios.get('http://54.169.143.212/api/getUser/' + localStorage.getItem("userId")).then((res) => {
                 this.fname = this.capitalize(res.data.fullName)
                 this.gender = res.data.gender;
                 this.img = res.data.img;
@@ -236,7 +236,7 @@ export default {
                     phoneNumber: this.phoneNumber,
                     companyName: this.companyName
                 }
-                axios.put("http://52.221.224.24/api/user/" + localStorage.getItem('userId') + '/', userInfo).then((res) => {
+                axios.put("http://54.169.143.212/api/user/" + localStorage.getItem('userId') + '/', userInfo).then((res) => {
                     if (res.data.msg == 'updated') {
                         this.showBtnSaved = !this.showBtnSaved
                         this.showBtnProgress = !this.showBtnProgress
@@ -253,7 +253,7 @@ export default {
             var formData = new FormData();
             formData.append('img', file);
             formData.append('_method', "PUT");
-            axios.post('http://52.221.224.24/api/updateImg/' + localStorage.getItem('userId') + '/', formData).then(() => {
+            axios.post('http://54.169.143.212/api/updateImg/' + localStorage.getItem('userId') + '/', formData).then(() => {
                 location.reload()
             })
         },

@@ -210,7 +210,7 @@ export default {
             this.allJobs = []
             var j = []
             var index = 0;
-            axios.get('http://52.221.224.24/api/jobposter').then((res) => {
+            axios.get('http://54.169.143.212/api/jobposter').then((res) => {
                 j = res.data;
                 for (let i = 0; i < j.length; i++) {
                     index += 1;
@@ -251,7 +251,7 @@ export default {
         },
 
         getAllJobsTitle() {
-            axios.get("http://52.221.224.24/api/jobTitle").then((res) => {
+            axios.get("http://54.169.143.212/api/jobTitle").then((res) => {
                 for (let value of res.data) {
                     this.jobs.push(value.job_title)
                 }
@@ -261,7 +261,7 @@ export default {
 
 
         getAllCompanyName() {
-            axios.get("http://52.221.224.24/api/companyName").then((res) => {
+            axios.get("http://54.169.143.212/api/companyName").then((res) => {
                 for (let value of res.data) {
                     this.companyList.push(value.company_name + " Company")
                 }
@@ -325,7 +325,7 @@ export default {
         },
 
         deleteJob(id) {
-            axios.delete('http://52.221.224.24/api/jobposter/' + id)
+            axios.delete('http://54.169.143.212/api/jobposter/' + id)
                 .then((res) => {
                     console.log(res.data);
                     this.getAllJobs()

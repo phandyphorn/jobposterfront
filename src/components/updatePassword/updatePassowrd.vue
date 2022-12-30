@@ -81,7 +81,7 @@ export default {
             this.isValidateOldPsw = false;
             this.isValidateNewPsw = false;
             if (!this.validationEditPf(this.oldPassword) && !this.validationEditPf(this.newPassword)) {
-                axios.put("http://52.221.224.24/api/changePassword/" + localStorage.getItem("userId") + '/', { oldPassword: this.oldPassword, newPassword: this.newPassword }).then((res) => {
+                axios.put("http://54.169.143.212/api/changePassword/" + localStorage.getItem("userId") + '/', { oldPassword: this.oldPassword, newPassword: this.newPassword }).then((res) => {
                     if (res.data.msg == 'failed') {
                         this.isValidateOldPsw = true
                     } else {

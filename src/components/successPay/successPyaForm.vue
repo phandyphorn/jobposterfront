@@ -47,9 +47,9 @@ export default {
                 plan_id: localStorage.getItem("plan_id"),
                 subscriber_id: localStorage.getItem("userId"),
             }
-            axios.post("http://52.221.224.24/api/transaction", tranInfo).then((res) => {
+            axios.post("http://54.169.143.212/api/transaction", tranInfo).then((res) => {
                 console.log(res.data);
-                axios.post("http://52.221.224.24/api/subscription", tranInfo)
+                axios.post("http://54.169.143.212/api/subscription", tranInfo)
             });
 
         },
