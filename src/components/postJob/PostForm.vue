@@ -448,7 +448,7 @@ export default {
       if (this.validationTenWords(this.jobDescription) && this.validationFiveWords(this.jobLocation) && this.validationFiveWords(this.contactName) && this.validationFiveWords(this.jobType) &&
         this.validationFiveWords(this.jobTitle) && this.validationTenWords(this.companyAddress) && this.validationTenWords(this.jobRequirement) &&
         this.validationTenWords(this.contactEmail) && this.salary > 100) {
-        axios.post("http://127.0.0.1:8000/api/jobposter/", {
+        axios.post("http//127.0.0.1:8000/api/jobposter/", {
           user_id: localStorage.getItem("userId"),
           job_title: this.jobTitle,
           company_location: this.jobLocation,
